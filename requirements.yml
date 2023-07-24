@@ -1,0 +1,8 @@
+---
+- name: "labocbz.prepare_host"
+  src: "https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Prepare-Host.git"
+  version: "1.0"
+
+- name: "tool.bootstrap_role"
+  src: "https://github.com/CBZ-D-velop/Ansible-Role-Tool-Bootstrap-Role.git"
+  version: "1.0"

@@ -1,0 +1,21 @@
+---
+- name: "Bootstrap SSL Files"
+  hosts: "all"
+  gather_facts: true
+  remote_user: root
+  strategy: free
+  become: true
+  become_user: root
+
+  tasks:
+
+    - name: "Include tool.bootstrap_role"
+      tags:
+        - "tool.bootstrap_role"
+      vars:
+        bootstrap_role_base_path: "{{ input_bootstrap_role_base_path }}"
+        bootstrap_role_meta_role_name: "{{ input_bootstrap_role_meta_role_name }}"
+        bootstrap_role_meta_namespace: "{{ input_bootstrap_role_meta_namespace }}"
+        bootstrap_role_technologies: "{{ input_bootstrap_role_technologies }}"
+      ansible.builtin.include_role:
+        name: "tool.bootstrap_role"

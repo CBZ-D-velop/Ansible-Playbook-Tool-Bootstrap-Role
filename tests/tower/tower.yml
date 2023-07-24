@@ -1,0 +1,9 @@
+---
+input_bootstrap_role_base_path: "/root"
+input_bootstrap_role_meta_role_name: "my_new_role"
+input_bootstrap_role_meta_namespace: "labocbz"
+input_bootstrap_role_technologies:
+  - "UNIX"
+  - "Ansible"
+  - "Shell"
+  - "PHP"
