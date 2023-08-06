@@ -16,6 +16,9 @@
         bootstrap_role_base_path: "{{ input_bootstrap_role_base_path }}"
         bootstrap_role_meta_role_name: "{{ input_bootstrap_role_meta_role_name }}"
         bootstrap_role_meta_namespace: "{{ input_bootstrap_role_meta_namespace }}"
-        bootstrap_role_technologies: "{{ input_bootstrap_role_technologies }}"
+        bootstrap_role_meta_description: "{{ input_bootstrap_role_meta_description }}"
+        bootstrap_role_tags: "{{ input_bootstrap_role_technologies }}"
+        bootstrap_role_user: "{{ input_bootstrap_role_user }}"
+        bootstrap_role_meta_author: "{{ input_bootstrap_role_meta_author }}"
       ansible.builtin.include_role:
         name: "tool.bootstrap_role"
