@@ -3,6 +3,8 @@ input_bootstrap_role_base_path: "/root"
 input_bootstrap_role_meta_role_name: "my_new_role"
 input_bootstrap_role_user: "lordrobincbz" # The user for the bootstrap role
 input_bootstrap_role_meta_author: "Lord Robin Crombez" # The author of the bootstrap role
+# Your compangy / lab name
+input_bootstrap_role_meta_company: "Labo-CBZ"
 
 input_bootstrap_role_meta_namespace: "labocbz"
 input_bootstrap_role_meta_description: "An Ansible role to install and configure Prometheus on your host." # The description of the bootstrap role
