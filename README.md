@@ -103,89 +103,14 @@ molecule test
 
 ## Installation
 
-To install this role, just copy/import this role or raw file into your fresh playbook repository or call it with the "include_role/import_role" module.
+To install this playbook, just copy/import this playbook or raw file into your fresh playbook repository or call it with the "include_playbook/import_playbook" module.
 
 ## Usage
 
 ### Vars
 
-Some vars a required to run this role:
-
-```YAML
----
----
-# The current user and group to create file
-bootstrap_role_user: "root"
-# The base path on where you want your role
-bootstrap_role_base_path: "/root"
-
-# Your author name
-bootstrap_role_meta_author: "Lord Robin Crombez"
-# The namespace of your role
-bootstrap_role_meta_namespace: "labocbz"
-# The role name
-bootstrap_role_meta_role_name: "my_new_role"
-# The little description for the meta file and the readme
-bootstrap_role_meta_description: "This is a limited description for the meta."
-# Your compangy / lab name
-bootstrap_role_meta_company: "Labo-CBZ"
-# The licence you wanna put on it (MIT file imported)
-bootstrap_role_meta_license: "MIT"
-# Some tags you want to put in plus of the base one
-bootstrap_role_tags:
-  - "UNIX"
-
-# The driver you use for molecule
-bootstrap_role_molecule_driver: "docker"
-
-# The path of your future role
-bootstrap_role_path: "{{ bootstrap_role_base_path }}/{{ bootstrap_role_meta_namespace }}.{{ bootstrap_role_meta_role_name }}"
-
-# A list of folder to create
-bootstrap_role_folders:
-  - "defaults"
-  - "files"
-  - "handlers"
-  - "meta"
-  - "molecule"
-  - "molecule/default"
-  - "molecule/gitlabci"
-  - "tasks"
-  - "templates"
-  - "tests"
-  - "tests/tower"
-  - "tests/inventory"
-  - "tests/inventory/group_vars"
-  - "tests/inventory/host_vars"
-  - "tests/certs"
-  - "vars"
-
-# Some file to import in the root folder of the future role
-bootstrap_root_files:
-  - ".ansible-lint"
-  - ".ansible.cfg"
-  - ".yamllint"
-  - "CODEOWNERS"
-  - ".gitlab-ci.yml"
-```
-
-The best way is to modify these vars by copy the ./default/main.yml file into the ./vars and edit with your personnals requirements.
-
-You can set vars in the template model in Ansible AWX / Tower or just surchage them during the playbook call.
-
-In order to surchage vars, you have multiples possibilities but for mains cases you have to put vars in your inventory and/or on your AWX / Tower interface.
-
 ```YAML
 # From inventory
----
-inv_bootstrap_role_base_path: "/root"
-inv_bootstrap_role_meta_role_name: "my_new_role"
-inv_bootstrap_role_meta_namespace: "labocbz"
-inv_bootstrap_role_technologies:
-  - "UNIX"
-  - "Ansible"
-  - "Shell"
-  - "PHP"
 
 ```
 
@@ -193,23 +118,6 @@ inv_bootstrap_role_technologies:
 # From AWX / Tower
 ---
 all vars from to put/from AWX / Tower
-```
-
-### Run
-
-To run this role, you can copy the molecule/default/converge.yml playbook and add it into your playbook:
-
-```YAML
-- name: "Include tool.bootstrap_role"
-  tags:
-    - "tool.bootstrap_role"
-  vars:
-    bootstrap_role_base_path: "{{ inv_bootstrap_role_base_path }}"
-    bootstrap_role_meta_role_name: "{{ inv_bootstrap_role_meta_role_name }}"
-    bootstrap_role_meta_namespace: "{{ inv_bootstrap_role_meta_namespace }}"
-    bootstrap_role_technologies: "{{ inv_bootstrap_role_technologies }}"
-  ansible.builtin.include_role:
-    name: "tool.bootstrap_role"
 ```
 
 ## Architectural Decisions Records

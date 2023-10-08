@@ -9,7 +9,7 @@ input_bootstrap_role_meta_company: "Labo-CBZ"
 input_bootstrap_role_meta_namespace: "labocbz"
 input_bootstrap_role_meta_description: "An Ansible role to install and configure Prometheus on your host." # The description of the bootstrap role
 
-input_bootstrap_role_technologies:
+input_bootstrap_role_tags:
 - "Ansible" # Tags for the bootstrap role
 - "Debian"
 - "Prometheus"
