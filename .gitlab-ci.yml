@@ -33,6 +33,8 @@ variables:
     - yamllint -c ./.yamllint $path # Here mains files
   allow_failure: false
   retry: 2
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
 
 .ansible_lint: &ansible_lint
   stage: ansible-lint
@@ -45,6 +47,8 @@ variables:
     - ansible-lint --config=./.ansible-lint --exclude molecule --exclude tests ./*
   allow_failure: false
   retry: 2
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
 
 .molecule_test: &molecule_test
   stage: molecule-test
@@ -64,6 +68,8 @@ variables:
     - "molecule test --scenario-name $PIPELINE_SCENARIO_NAME"
   allow_failure: false
   retry: 2
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
 
 ###############################################################################
 #################### CI JOBS
