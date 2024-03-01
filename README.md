@@ -1,4 +1,4 @@
-# Ansible role: tool.bootstrap_role
+# Ansible playbook: tool.bootstrap_role
 
 ![Licence Status](https://img.shields.io/badge/licence-MIT-brightgreen)
 ![CI Status](https://img.shields.io/badge/CI-success-brightgreen)
@@ -117,7 +117,7 @@ To install this playbook, just copy/import this playbook or raw file into your f
 ```YAML
 # From AWX / Tower
 ---
-all vars from to put/from AWX / Tower
+
 ```
 
 ## Architectural Decisions Records
@@ -144,6 +144,12 @@ Here you can put your change to keep a trace of your work and decisions.
 * Molecule now use remote Docker image by Lord Robin Crombez
 * Molecule now use custom Docker image in CI/CD by env vars
 * New CICD with needs and optimization
+
+### 2024-03-01: Remastered
+
+* Imported new CICD
+* Rework global on readme
+* Rename of vars __
 
 ## Authors
 
