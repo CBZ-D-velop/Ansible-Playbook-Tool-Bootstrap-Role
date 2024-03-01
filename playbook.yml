@@ -2,8 +2,6 @@
 - name: "Bootstrap Ansible Role Files"
   hosts: "{{ tower_env | default([]) }}"
   gather_facts: true
-  remote_user: root
-  strategy: free
   become: true
   become_user: root
 
