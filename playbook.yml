@@ -29,5 +29,6 @@
         bootstrap_role__platforms: "{{ input_bootstrap_role__platforms }}"
         bootstrap_role__molecule_test_sequence: "{{ input_bootstrap_role__molecule_test_sequence }}"
         bootstrap_role__configuration_files: "{{ input_bootstrap_role__configuration_files }}"
+        bootstrap_role__ssl: "{{ input_inv_bootstrap_role__ssl }}"
       ansible.builtin.include_role:
         name: "tool.bootstrap_role"
