@@ -151,6 +151,14 @@ Here you can put your change to keep a trace of your work and decisions.
 * Rework global on readme
 * Rename of vars __
 
+### 2024-05-19: New CI
+
+* Added Markdown lint to the CICD
+* Rework all Docker images
+* Change CICD vars convention
+* New workers
+* Removed all automation based on branch
+
 ## Authors
 
 * Lord Robin Crombez
